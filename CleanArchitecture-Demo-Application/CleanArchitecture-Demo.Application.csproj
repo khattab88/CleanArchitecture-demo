@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>CleanArchitecture_Demo_Application</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MediatR" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Features\Clubs\Commands\" />
+    <Folder Include="Features\Players\Commands\DeletePlayer\" />
+    <Folder Include="Features\Players\Commands\UpdatePlayer\" />
+    <Folder Include="Features\Clubs\Queries\" />
+    <Folder Include="Features\Players\Queries\GetPlayerById\" />
+    <Folder Include="Features\Players\Queries\GetPlayersByClub\" />
+    <Folder Include="Features\Stadiums\Commands\" />
+    <Folder Include="Features\Stadiums\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitecture-Demo.Domain\CleanArchitecture-Demo.Domain.csproj" />
+    <ProjectReference Include="..\CleanArchitecture-Demo.Shared\CleanArchitecture-Demo.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
